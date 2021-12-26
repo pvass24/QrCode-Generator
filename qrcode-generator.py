@@ -9,7 +9,16 @@ filename = input("Awesome! Now enter the name of the file: ")
 
 filename = filename + ".png"
 
-img.save('/home/boto3/Desktop/'+ filename)
+location = input("""Please enter the file location: 
+ex. Windows PC would look like C:/Users/Yourprofilename/Desktop
+(Remember Windows default backslashes (\) need to be swapped with (/)
+Linux would look like /home/Yourprofilename//Desktop
+Enter Location here: """)
+
+location = location + ("/")
+
+img.save(location + filename)
+
 
 
 
